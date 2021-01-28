@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Je H
+
+[alias]
+	recent = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | head -n 10
+	s = status
+	ss = s
+	sh = stash
+	re = rebase
+	rt = reset
+	ph = push
+	pl = pull
+	co = checkout
+	upstream = !git branch --set-upstream-to=origin/$(git current) $(git current)
+	pam= !BRANCH=`git recent | fzf` && git checkout ${BRANCH}
