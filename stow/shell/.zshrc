@@ -34,3 +34,8 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(mcfly init zsh)"
+
+bindkey '\e[H'    beginning-of-line
+bindkey '\e[F'    end-of-line
+
+
